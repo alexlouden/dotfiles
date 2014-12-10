@@ -26,6 +26,9 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 # Setting default finder view to column
 defaults write com.apple.finder FXPreferredViewStyle Clmv
 
+# Show hidden files
+defaults write com.apple.Finder AppleShowAllFiles -bool true
+
 # Disabling the Time Machine new disk requests dialog
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 

@@ -1,0 +1,42 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Alignment",
+		"ApacheConf.tmLanguage",
+		"AutoPEP8",
+		"Better CoffeeScript",
+		"CoffeeCompile",
+		"Djaneiro",
+		"Django Click",
+		"Django Manage Commands",
+		"Emmet",
+		"Floobits",
+		"FuzzyFileNav",
+		"Handlebars",
+		"HTML5",
+		"Jekyll",
+		"JsFormat",
+		"KeyboardSpellCheck",
+		"LESS",
+		"Markdown Preview",
+		"Origami",
+		"Pretty JSON",
+		"Rails Developer Snippets",
+		"Rails Partial",
+		"Sass",
+		"SideBarEnhancements",
+		"SqlBeautifier",
+		"SublimeHighlight",
+		"SublimePythonIDE",
+		"Tag",
+		"Theme - Soda",
+		"Todo",
+		"TOML",
+		"Vagrant"
+	],
+	"repositories":
+	[
+		"https://github.com/n1k0/SublimeHighlight/tree/python3"
+	]
+}

@@ -1,0 +1,4 @@
+[
+	// { "keys": ["ctrl+shift+r"], "command": "reindent" , "args": { "single_line": false } }
+    { "keys": ["ctrl+shift+r"], "command": "auto_pep8", "args": {"preview": false} }
+]

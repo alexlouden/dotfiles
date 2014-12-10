@@ -14,3 +14,9 @@ export EDITOR='subl'
 
 # Old PS1
 # export PS1="\[\e[0;32m\]\u \w \n\$\[\e[0m\] "
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# compilation
+# export ARCHFLAGS="-arch x86_64"

@@ -1,0 +1,9 @@
+alias tree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'"
+alias ll="ls -la"
+
+# Open Chrome in promiscuous mode
+alias ogc='open -a Google\ Chrome --args --allow-file-access-from-files --disable-web-security'
+
+sortjson() {
+    python -c "import sys; import json; print(json.dumps(json.load(sys.stdin), sort_keys=True, indent=2))"
+}

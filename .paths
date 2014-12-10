@@ -1,0 +1,16 @@
+# PostgreSQL
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/lib:/usr/local/lib:/usr/lib:/Applications/Postgres.app/Contents/MacOS/lib
+
+# PIP
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+
+# Timing
+PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
+export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE}; "
+
+# Default editor
+export EDITOR='subl'
+
+# Old PS1
+# export PS1="\[\e[0;32m\]\u \w \n\$\[\e[0m\] "

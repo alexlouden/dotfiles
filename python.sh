@@ -1,0 +1,3 @@
+# TODO virtualenvs
+# pip
+# mkvirtualenv

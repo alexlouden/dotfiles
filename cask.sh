@@ -1,3 +1,6 @@
+echo "installing cask"
+brew install caskroom/cask/brew-cask
+
 apps=(
   
   google-chrome
@@ -8,8 +11,11 @@ apps=(
   
   alfred
   divvy
+  dash
   mou
-  
+  sourcetree
+  transmit
+
   qlcolorcode
   qlmarkdown
   quicklook-json

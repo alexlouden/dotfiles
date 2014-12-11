@@ -6,9 +6,11 @@ if test ! $(which brew); then
 fi
 
 # Update homebrew recipes
+echo "Updating homebrew..."
 brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
+echo "Updating utils..."
 brew install coreutils
 
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
@@ -29,10 +31,8 @@ binaries=(
   node
   tree
   git
+  mackup
 )
 
 echo "installing binaries..."
 brew install ${binaries[@]}
-
-echo "installing oh-my-zsh..."
-curl -L http://install.ohmyz.sh | sh

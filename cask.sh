@@ -3,27 +3,28 @@ brew install caskroom/cask/brew-cask
 
 apps=(
   
+  # Web browsers
   google-chrome
   firefox
   
-  dropbox
-  slack
-  
-  alfred
-  divvy
-  dash
-  mou
-  sourcetree
-  transmit
+  # General
+  dropbox        # Backup and shared folders
+  slack          # Team chat
+  alfred         # Shortcut utility
+  divvy          # Window manager
+  transmission   # Torrent client
+  vlc            # Media player
 
-  qlcolorcode
-  qlmarkdown
-  quicklook-json
+  # Developer tools
+  dash           # Offline documentation
+  mou            # Markdown editor
+  sourcetree     # Git GUI
+  transmit       # FTP GUI
+  qlcolorcode    # Quicklook syntax highlighting
+  qlmarkdown     # Quicklook markdown "
+  quicklook-json # Quicklook json "
   
-  transmit
-  transmission
-  vlc
-  
+  # VMs
   vmware-fusion
   vagrant
 )

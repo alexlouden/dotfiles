@@ -23,5 +23,10 @@ export EDITOR='subl'
 
 # vmrun binary
 export PATH="$PATH:/Applications/VMware Fusion.app/Contents/Library"
+
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/
+source /usr/local/bin/virtualenvwrapper.sh
 # PostgreSQL
 export PATH="$PATH://Applications/Postgres.app/Contents/Versions/9.4/bin/"

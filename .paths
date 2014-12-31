@@ -28,5 +28,9 @@ export PATH="$PATH:/Applications/VMware Fusion.app/Contents/Library"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/
 source /usr/local/bin/virtualenvwrapper.sh
+
+# GO
+export GOPATH=$HOME/go/
+
 # PostgreSQL
 export PATH="$PATH://Applications/Postgres.app/Contents/Versions/9.4/bin/"

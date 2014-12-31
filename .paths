@@ -20,5 +20,8 @@ export EDITOR='subl'
 
 # compilation
 # export ARCHFLAGS="-arch x86_64"
+
+# vmrun binary
+export PATH="$PATH:/Applications/VMware Fusion.app/Contents/Library"
 # PostgreSQL
 export PATH="$PATH://Applications/Postgres.app/Contents/Versions/9.4/bin/"

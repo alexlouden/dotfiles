@@ -20,3 +20,5 @@ export EDITOR='subl'
 
 # compilation
 # export ARCHFLAGS="-arch x86_64"
+# PostgreSQL
+export PATH="$PATH://Applications/Postgres.app/Contents/Versions/9.4/bin/"

@@ -28,3 +28,7 @@ source $ZSH/oh-my-zsh.sh
 
 source $HOME/.paths
 source $HOME/.aliases
+
+# locale
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8

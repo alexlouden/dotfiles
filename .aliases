@@ -8,3 +8,5 @@ alias ogc='open -a Google\ Chrome --args --allow-file-access-from-files --disabl
 sortjson() {
     python -c "import sys; import json; print(json.dumps(json.load(sys.stdin), sort_keys=True, indent=2))"
 }
+
+alias haltall="vagrant global-status | grep running | awk '{ print $1 }' | xargs -I % vagrant halt %"

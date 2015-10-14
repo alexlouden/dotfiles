@@ -15,7 +15,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Ask for password immediately after sleep/screensaver
 defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+defaults write com.apple.screensaver askForPasswordDelay -int 5
 
 # Menu bar: show battery percentage
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
@@ -32,7 +32,7 @@ defaults write com.apple.Finder AppleShowAllFiles -bool true
 # Disabling the Time Machine new disk requests dialog
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# Don't automatically switch to a Space with open windows for and application when switching to it 
+# Don't automatically switch to a Space with open windows for and application when switching to it
 defaults write com.apple.dock workspaces-auto-swoosh -boolean NO
 
 # Don’t automatically rearrange Spaces based on most recent use

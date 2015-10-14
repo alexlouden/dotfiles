@@ -5,15 +5,11 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
-if test ! -d ~/.oh-my-zsh; then
-	echo "installing oh-my-zsh..."
-	curl -L http://install.ohmyz.sh | sh
+echo "installing oh-my-zsh..."
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH="${DIR}/zsh" sh
 
-	# Link oh-my-zsh plugins
-	mkdir "~/.oh-my-zsh"
-	rm -r "~/.oh-my-zsh/custom"
-	ln -svi "${DIR}/.oh-my-zsh/custom" ~/.oh-my-zsh
-fi
+echo "installing theme"
+ln -svi "${DIR}/alexlouden-pure.zsh-theme" "${DIR}/zsh/custom/"
 
 echo "setting up symlinks"
 # files to symlink to ~

@@ -10,3 +10,22 @@ sortjson() {
 }
 
 alias haltall="vagrant global-status | grep running | awk '{ print $1 }' | xargs -I % vagrant halt %"
+
+upyet() {
+    # first line shows errors
+    ping -c 1 $1 > /dev/null
+    sleep 1s
+    while :; do
+        # No errors
+        if ping -c 1 $1 > /dev/null 2>&1; then
+            # ding!
+            tput bel
+            echo "$1 online"
+            break
+        else
+            # Show progress
+            echo -n "."
+        fi
+        sleep 2s
+    done
+}

@@ -30,3 +30,6 @@ export LANG=en_US.UTF-8
 
 # # travis
 # [ -f /Users/alex/.travis/travis.sh ] && source /Users/alex/.travis/travis.sh
+
+# Fix progress bars
+export COLUMNS

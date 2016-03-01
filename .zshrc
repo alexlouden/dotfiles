@@ -2,7 +2,6 @@
 export ZSH=$HOME/dotfiles/zsh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
 ZSH_THEME="alexlouden-pure"
 
 # ENABLE_CORRECTION="true"

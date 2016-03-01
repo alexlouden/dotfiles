@@ -29,3 +29,8 @@ upyet() {
         sleep 2s
     done
 }
+
+# Install with pip then show installed version
+pipi() {
+    pip install $1 && pip freeze | grep $1
+}

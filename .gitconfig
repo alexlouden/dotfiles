@@ -25,3 +25,11 @@
 	tool = Kaleidoscope
 [credential]
 	helper = osxkeychain
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[push]
+	default = matching
+[url "ssh://git@heroku.com/"]
+	insteadOf = https://git.heroku.com/

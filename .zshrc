@@ -14,6 +14,7 @@ plugins=(
   python
   sublime
   zsh-history-substring-search
+  heroku
 )
 
 # User configuration

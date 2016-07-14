@@ -34,3 +34,9 @@ upyet() {
 pipi() {
     pip install $1 && pip freeze | grep $1
 }
+
+alias clear_dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
+
+myip(){
+    ifconfig en0 | head -n 4 | tail -n 1 | awk '{print $2;exit}'
+}

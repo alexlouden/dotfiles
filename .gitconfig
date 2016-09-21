@@ -1,12 +1,12 @@
 [user]
 	name = Alex Louden
-	email = alex@louden.com
+	email = alex@icetana.com
 [core]
 	excludesfile = /Users/alex/.gitignore_global
 	editor = subl -n -w
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
@@ -25,11 +25,11 @@
 	tool = Kaleidoscope
 [credential]
 	helper = osxkeychain
+[alias]
+	tags = log -n1 --pretty=format:%h%d
 [filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 	required = true
-[push]
-	default = matching
-[url "ssh://git@heroku.com/"]
-	insteadOf = https://git.heroku.com/
+[commit]
+	template = /Users/alex/.stCommitMsg

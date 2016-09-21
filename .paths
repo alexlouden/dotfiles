@@ -33,10 +33,11 @@ source /usr/local/bin/virtualenvwrapper.sh
 export GOPATH=$HOME/go/
 
 # PostgreSQL
-export PATH="$PATH://Applications/Postgres.app/Contents/Versions/9.4/bin/"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Terraform
-export PATH="/Users/alex/terraform/:$PATH"
+# Terraform and packer
+export PATH="/Users/alex/terraform:$PATH"
+export PATH="/Users/alex/packer:$PATH"

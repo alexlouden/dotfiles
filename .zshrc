@@ -20,6 +20,9 @@ plugins=(
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+# Disable autoupdate
+DISABLE_UPDATE_PROMPT=true
+
 source $ZSH/oh-my-zsh.sh
 source $HOME/.paths
 source $HOME/.aliases

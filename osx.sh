@@ -4,7 +4,7 @@ sudo -v
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
 # Hiding spotlight search icon
-sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+# sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
 # Automatically quit printer app once the print jobs complete
 defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true

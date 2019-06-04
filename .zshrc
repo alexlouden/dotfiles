@@ -15,6 +15,8 @@ plugins=(
   sublime
   zsh-history-substring-search
   heroku
+  terraform
+  aws
 )
 
 # User configuration
@@ -33,3 +35,12 @@ export LANG=en_US.UTF-8
 
 # Fix progress bars
 export COLUMNS
+
+# iTerm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# no more replay
+disable r
+
+# GPG git
+export GPG_TTY=$(tty)

@@ -33,7 +33,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 export GOPATH=$HOME/go/
 
 # PostgreSQL
-export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
+export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin"
 
 # Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -41,3 +41,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Terraform and packer
 export PATH="/Users/alex/terraform:$PATH"
 export PATH="/Users/alex/packer:$PATH"
+
+# YARN
+export PATH="$PATH:$HOME/.yarn/bin"
+
+# OpenCV
+export PATH="/usr/local/opt/opencv3/bin:$PATH"
+
+# Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+# Code
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"

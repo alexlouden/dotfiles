@@ -6,17 +6,19 @@ ZSH_THEME="alexlouden-pure"
 
 # ENABLE_CORRECTION="true"
 
+export ZSH_LAZY_NVM_BINARIES=('nvm' 'npm' 'node' 'yarn')
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 plugins=(
   git
   brew
-  vagrant
+  # vagrant
   python
-  sublime
+  # sublime
   zsh-history-substring-search
   heroku
   terraform
-  aws
+  # aws
 )
 
 # User configuration
@@ -47,3 +49,21 @@ disable r
 
 # GPG git
 export GPG_TTY=$(tty)
+
+# Async zsh
+# https://github.com/nvm-sh/nvm/issues/539#issuecomment-403661578
+source ~/.zsh-async/async.zsh
+
+export NVM_DIR="$HOME/.nvm"
+function load_nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+
+# Initialize worker
+async_start_worker nvm_worker -n
+async_register_callback nvm_worker load_nvm
+async_job nvm_worker sleep 0.1
+
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

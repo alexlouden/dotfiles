@@ -53,3 +53,6 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 
 # Code
 export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# Dotnet
+export PATH="$PATH:/usr/local/share/dotnet"

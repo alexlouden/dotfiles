@@ -45,3 +45,5 @@ myip() {
 
 alias tp="terraform plan -out=plan"
 alias ta="terraform apply plan"
+
+alias gc='git commit -S -m'

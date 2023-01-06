@@ -9,7 +9,7 @@ echo "installing oh-my-zsh..."
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | ZSH="${DIR}/zsh" sh
 
 echo "installing theme"
-ln -svi "${DIR}/alexlouden-pure.zsh-theme" "${DIR}/zsh/custom/"
+ln -svi "${DIR}/alexlouden-pure.zsh-theme" "${DIR}/zsh/custom"
 
 echo "setting up symlinks"
 # files to symlink to ~

@@ -4,18 +4,18 @@
 	signingkey = E5E90055152127FE
 [core]
 	excludesfile = /Users/alex/.gitignore_global
-	editor = /usr/local/bin/subl -n -w
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
 	path =
 [core]
 	excludesfile = /Users/alex/.gitignore_global
-	editor = subl -n -w
+	editor = code --wait
+	ignorecase = false
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
 	path =
 [mergetool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	cmd = /private/var/folders/f_/f_hps0j96_5dhdjb14zxrg800000gn/T/AppTranslocation/4EC897F4-A4ED-492A-BC5A-AC8AC1AD0582/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [difftool "Kaleidoscope"]
 	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
@@ -43,3 +43,14 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[commit]
+	template = /Users/alex/.stCommitMsg
+	gpgsign = true
+[pull]
+	rebase = false
+[remote]
+	pushDefault = github
+[gpg]
+	program = /usr/local/bin/gpg
+[fetch]
+	prune = true

@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/dotfiles/zsh
 
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
 # Set name of the theme to load.
 ZSH_THEME="alexlouden-pure"
 
@@ -15,17 +17,18 @@ plugins=(
   # vagrant
   python
   # sublime
-  zsh-history-substring-search
-  heroku
-  terraform
+  # heroku
+  # terraform
   # aws
+  poetry
 )
 
 # User configuration
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Disable autoupdate
-DISABLE_UPDATE_PROMPT=true
+DISABLE_UPDATE_PROMPT="true"
+DISABLE_AUTO_UPDATE="true"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.paths
@@ -52,18 +55,23 @@ export GPG_TTY=$(tty)
 
 # Async zsh
 # https://github.com/nvm-sh/nvm/issues/539#issuecomment-403661578
-source ~/.zsh-async/async.zsh
+# source ~/.zsh-async/async.zsh
 
-export NVM_DIR="$HOME/.nvm"
-function load_nvm() {
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
-}
+# export NVM_DIR="$HOME/.nvm"
+# function load_nvm() {
+#     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+#     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+# }
 
 # Initialize worker
-async_start_worker nvm_worker -n
-async_register_callback nvm_worker load_nvm
-async_job nvm_worker sleep 0.1
+# async_start_worker nvm_worker -n
+# async_register_callback nvm_worker load_nvm
+# async_job nvm_worker sleep 0.1
 
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+# stop it
+export HOMEBREW_NO_AUTO_UPDATE=1

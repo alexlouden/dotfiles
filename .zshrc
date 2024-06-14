@@ -20,7 +20,7 @@ plugins=(
   # heroku
   # terraform
   # aws
-  poetry
+  # poetry
 )
 
 # User configuration
@@ -75,3 +75,4 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 # stop it
 export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_CLEANUP=1

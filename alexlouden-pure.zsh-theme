@@ -71,7 +71,7 @@ prompt_pure_precmd() {
 	# git info
 	vcs_info
 
-	local prompt_pure_preprompt="\n%F{blue}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f"
+	local prompt_pure_preprompt="\n%{$(iterm2_prompt_mark)%}%F{blue}%~%F{242}$vcs_info_msg_0_`prompt_pure_git_dirty` $prompt_pure_username%f %F{yellow}`prompt_pure_cmd_exec_time`%f"
 	print -P $prompt_pure_preprompt
 
 	# check async if there is anything to pull
@@ -99,6 +99,7 @@ prompt_pure_precmd() {
 prompt_pure_setup() {
 	# prevent percentage showing up
 	# if output doesn't end with a newline
+	export ITERM2_SQUELCH_MARK=1
 	export PROMPT_EOL_MARK=''
 
 	prompt_opts=(cr subst percent)

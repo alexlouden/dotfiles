@@ -57,3 +57,5 @@
 	prune = true
 [submodule]
 	recurse = true
+[init]
+	defaultBranch = main

@@ -47,3 +47,6 @@ alias tp="terraform plan -out=plan"
 alias ta="terraform apply plan"
 
 alias gc='git commit -S -m'
+
+# Cursor Bonobo (second profile)
+alias cursorb='/Applications/Cursor\ Bonobo.app/Contents/MacOS/Cursor --user-data-dir=$HOME/.cursor-bonobo --extensions-dir=$HOME/.cursor-bonobo/extensions'

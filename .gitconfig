@@ -1,44 +1,36 @@
 [user]
 	name = Alex Louden
 	email = alex@louden.com
-	signingkey = E5E90055152127FE
-[core]
-	excludesfile = /Users/alex/.gitignore_global
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path =
+	signingkey = BC1865638D45B0E970058FABE5E90055152127FE
+
 [core]
 	excludesfile = /Users/alex/.gitignore_global
 	editor = code --wait
 	ignorecase = false
-[difftool "sourcetree"]
-	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /private/var/folders/f_/f_hps0j96_5dhdjb14zxrg800000gn/T/AppTranslocation/4EC897F4-A4ED-492A-BC5A-AC8AC1AD0582/d/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
 [diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[mergetool]
-	prompt = false
+  tool = vscode
+[difftool "vscode"]
+  cmd = code --wait --diff $LOCAL $REMOTE
+
 [merge]
-	tool = Kaleidoscope
+  tool = vscode
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
+
+
 [credential]
 	helper = osxkeychain
 [push]
 	default = current
 	autoSetupRemote = true
+
 [url "ssh://git@heroku.com/"]
 	insteadOf = https://git.heroku.com/
+
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -52,10 +44,13 @@
 [remote]
 	pushDefault = github
 [gpg]
-	program = /usr/local/bin/gpg
+	program = /opt/homebrew/bin/gpg
+	format = openpgp
 [fetch]
 	prune = true
 [submodule]
 	recurse = true
 [init]
 	defaultBranch = main
+[safe]
+	directory = *
